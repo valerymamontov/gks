@@ -52,31 +52,31 @@ for key in dictRegions.keys():
                 allPop_men.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "12" and codePopulation == "w2:p_mest:12":
                 # cityPop_allGender.append("%s;Оба пола;городское население" % dictRegions[key])
-                cityPop_allGender.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                cityPop_allGender.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "2" and codePopulation == "w2:p_mest:12":
                 # cityPop_women.append("%s;Женщины;городское население" % dictRegions[key])
-                cityPop_women.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                cityPop_women.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "3" and codePopulation == "w2:p_mest:12":
                 # cityPop_men.append("%s;Мужчины;городское население" % dictRegions[key])
-                cityPop_men.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                cityPop_men.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "12" and codePopulation == "w2:p_mest:13":
                 # ruralPop_allGender.append("%s;Оба пола;сельское население" % dictRegions[key])
-                ruralPop_allGender.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                ruralPop_allGender.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "2" and codePopulation == "w2:p_mest:13":
                 # ruralPop_women.append("%s;Женщины;сельское население" % dictRegions[key])
-                ruralPop_women.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                ruralPop_women.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
             elif codeOrg == key and codeGender == "3" and codePopulation == "w2:p_mest:13":
                 # ruralPop_men.append("%s;Мужчины;сельское население" % dictRegions[key])
-                ruralPop_men.append(";%s" % g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
+                ruralPop_men.append(g.getElementsByTagName("generic:ObsValue")[0].getAttribute("value"))
 
         if allPop_allGender is True: file.write("%s\n" % ';'.join(allPop_allGender))
         if allPop_women: file.write("%s\n" % ';'.join(allPop_women))
         if allPop_men: file.write("%s\n" % ';'.join(allPop_men))
-        if cityPop_allGender: cityPop_allGender.append("\n")
-        if cityPop_women: cityPop_women.append("\n")
-        if cityPop_men: cityPop_men.append("\n")
-        if ruralPop_allGender: ruralPop_allGender.append("\n")
-        if allPop_allGender: ruralPop_women.append("\n")
-        if allPop_allGender: ruralPop_men.append("\n")
+        if cityPop_allGender: file.write("%s\n" % ';'.join(cityPop_allGender))
+        if cityPop_women: file.write("%s\n" % ';'.join(cityPop_women))
+        if cityPop_men: file.write("%s\n" % ';'.join(cityPop_men))
+        if ruralPop_allGender: file.write("%s\n" % ';'.join(ruralPop_allGender))
+        if allPop_allGender: file.write("%s\n" % ';'.join(ruralPop_women))
+        if allPop_allGender: file.write("%s\n" % ';'.join(ruralPop_men))
 
 file.close()
