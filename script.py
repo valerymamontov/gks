@@ -4,6 +4,7 @@ dom = xml.dom.minidom.parse("data.xml")
 dom.normalize()
 
 
+
 # -------------- формирование списка регионов
 dictRegions = {}
 for i in dom.getElementsByTagName("structure:CodeList")[0].getElementsByTagName("structure:Code"):
