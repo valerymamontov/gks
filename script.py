@@ -20,7 +20,7 @@ for i in dom.getElementsByTagName("structure:CodeList")[0].getElementsByTagName(
 
 
 # -------------- открытие текстового файл и запись в него заголовка
-file = open("data.txt", "a")
+file = open("data.csv", "a")
 file.write("Регион;Структура населения;Тип поселения;%s" % ';'.join(str(e) for e in range(1990, 2018)))
 
 
