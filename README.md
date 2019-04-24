@@ -19,7 +19,8 @@
 ![Image alt](https://github.com/valerymamontov/screenshots/blob/master/fedstat-003.png)
 
 ### Решение:
-Скрипт с помощью xml.dom.minidom обрабатывает XML, извлекает данные и сохраняет в CSV-файл.
+На python 3.7 написал скрипт (script.py), который с помощью модуля xml.dom.minidom обрабатывает XML,
+извлекает данные и сохраняет в CSV-файл.
 Затем этот файл можно открыть в экселе и навести красоту. Поставить фильтры на заголовки.
 Выделить заголовки цветом и т.д.
 ![Image alt](https://github.com/valerymamontov/screenshots/blob/master/fedstat-004.png)
