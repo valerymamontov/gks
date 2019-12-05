@@ -12,7 +12,7 @@ dictRegions = {}
 for i in dom.getElementsByTagName("structure:CodeList")[0].getElementsByTagName("structure:Code"):
     code = str(i.getAttribute("value"))
     if code in code_list:
-        if code is '45000000000':
+        if code == '45000000000':
             dictRegions[code] = "Город Москва"
         else:
             dictRegions[code] = str(i.getElementsByTagName("structure:Description")[0].firstChild.data)
